@@ -2,6 +2,8 @@
 #include <vector>
 
 #include "printable.h"
+#include "employee.h"
+#include "office.h"
 
 /*
  * Функція print друкує інформацію про кожен об'єкт у списку. Ідея полягає у тому, що функція
@@ -61,13 +63,31 @@ int main()
 
     // Створіть об'єкти Employee та наповніть список тут....
 
+    Employee* emp1 = new Employee("Vasyl", "0987654321", "Lviv", 300, 2015);
+    employeesToPrint.push_back(emp1);
+
+    Employee* emp2 = new Employee("Volodumur", "0983254324", "Kyiv", 400, 2014);
+    employeesToPrint.push_back(emp2);
+
+    Employee* emp3 = new Employee("Olia", "09863434234", "Rivne", 500, 2013);
+    employeesToPrint.push_back(emp3);
+
     printList(employeesToPrint);
 
-    std::cout << std::endl; // ------------
+   // std::cout << std::endl; // ------------
 
     std::vector<Printable *> officesToPrint;
 
     // Створіть об'єкти Office та наповніть список тут....
+
+    Office* off1 = new Office("Softserve", "Lviv", 1000, 2000);
+    officesToPrint.push_back(off1);
+
+    Office* off2 = new Office("Epum", "Lviv", 800, 1000);
+    officesToPrint.push_back(off2);
+
+    Office* off3 = new Office("GlobalLogic", "Lviv", 500, 500);
+    officesToPrint.push_back(off3);
 
     printList(officesToPrint);
 
